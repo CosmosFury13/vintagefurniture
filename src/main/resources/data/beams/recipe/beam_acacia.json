@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "minecraft:acacia_planks" },
+    { "tag": "c:rods/wooden" }
+  ],
+  "result": {
+    "id": "beams:beam_acacia",
+    "count": 4
+  }
+}

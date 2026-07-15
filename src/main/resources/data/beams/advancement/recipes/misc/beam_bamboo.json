@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ "beams:beam_bamboo" ]
+  },
+  "criteria": {
+    "has_bamboo_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [ { "items": [ "minecraft:bamboo_planks" ] } ]
+      }
+    }
+  },
+  "requirements": [ [ "has_bamboo_planks" ] ]
+}

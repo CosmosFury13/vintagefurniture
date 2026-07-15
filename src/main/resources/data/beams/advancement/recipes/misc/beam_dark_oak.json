@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ "beams:beam_dark_oak" ]
+  },
+  "criteria": {
+    "has_dark_oak_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [ { "items": [ "minecraft:dark_oak_planks" ] } ]
+      }
+    }
+  },
+  "requirements": [ [ "has_dark_oak_planks" ] ]
+}

@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ "beams:beam_cherry" ]
+  },
+  "criteria": {
+    "has_cherry_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [ { "items": [ "minecraft:cherry_planks" ] } ]
+      }
+    }
+  },
+  "requirements": [ [ "has_cherry_planks" ] ]
+}

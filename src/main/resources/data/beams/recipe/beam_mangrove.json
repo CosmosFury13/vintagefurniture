@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "minecraft:mangrove_planks" },
+    { "tag": "c:rods/wooden" }
+  ],
+  "result": {
+    "id": "beams:beam_mangrove",
+    "count": 4
+  }
+}

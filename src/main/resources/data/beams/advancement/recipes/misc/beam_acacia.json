@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ "beams:beam_acacia" ]
+  },
+  "criteria": {
+    "has_acacia_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [ { "items": [ "minecraft:acacia_planks" ] } ]
+      }
+    }
+  },
+  "requirements": [ [ "has_acacia_planks" ] ]
+}

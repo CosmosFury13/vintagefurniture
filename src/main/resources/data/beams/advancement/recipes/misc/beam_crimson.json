@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [ "beams:beam_crimson" ]
+  },
+  "criteria": {
+    "has_crimson_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [ { "items": [ "minecraft:crimson_planks" ] } ]
+      }
+    }
+  },
+  "requirements": [ [ "has_crimson_planks" ] ]
+}

@@ -1,0 +1,19 @@
+{
+  "itemGroup.beams": "Beams",
+  "block.beams.beam_anchor": "Beam",
+  "tag.item.beams.beams": "Beams",
+  "item.beams.beam.not_enough": "Need %s more %s",
+  "item.beams.beam.not_enough.plural": "Need %s more %ss",
+  "item.beams.beam.cross_structure": "Can't link a beam between an assembled structure and the ground",
+  "item.beams.beam_oak": "Oak Beam",
+  "item.beams.beam_spruce": "Spruce Beam",
+  "item.beams.beam_birch": "Birch Beam",
+  "item.beams.beam_jungle": "Jungle Beam",
+  "item.beams.beam_acacia": "Acacia Beam",
+  "item.beams.beam_dark_oak": "Dark Oak Beam",
+  "item.beams.beam_mangrove": "Mangrove Beam",
+  "item.beams.beam_cherry": "Cherry Beam",
+  "item.beams.beam_crimson": "Crimson Beam",
+  "item.beams.beam_warped": "Warped Beam",
+  "item.beams.beam_bamboo": "Bamboo Beam"
+}

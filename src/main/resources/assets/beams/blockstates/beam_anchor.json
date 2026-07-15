@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "is_start=true": { "model": "beams:block/beam/beam_anchor_start" },
+    "is_start=false": { "model": "beams:block/beam/beam_anchor_end" }
+  }
+}
