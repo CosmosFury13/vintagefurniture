@@ -7,7 +7,9 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -20,35 +22,57 @@ public class VintageFurn {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public VintageFurn() {
+        // Forge 1.20.1 way of getting the mod event bus
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::commonSetup);
+        // Register your registries
+        BeamsBlocks.BLOCKS.register(modEventBus);
+        BeamsBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        BeamsItems.ITEMS.register(modEventBus);
+        BeamsCreativeTab.TABS.register(modEventBus);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        // If this exists in your project and is already ported to Forge
+        BeamsAttachments.register(modEventBus);
+
+        // Lifecycle listeners
+        modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
+
+        // Networking registration
+        modEventBus.addListener(BeamsNetworking::register);
+
+        // Register this class on the Forge event bus
+        MinecraftForge.EVENT_BUS.register(this);
+
+        // Register config
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, BeamsConfig.SPEC);
+
+        // Optional compatibility loader
+        EveryCompatLoader.init();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        // Common setup code
     }
 
-    // Add the example block item to the building blocks tab
+    // Add items to creative tabs
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        // Example:
+        // if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+        //     event.accept(BeamsItems.MY_ITEM.get());
+        // }
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
+        // Server starting logic
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            // Client setup code
         }
     }
 }
