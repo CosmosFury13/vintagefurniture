@@ -1,6 +1,13 @@
 package net.cf.vintageefurn;
 
 import com.mojang.logging.LogUtils;
+import net.cf.vintageefurn.attachment.BeamsAttachments;
+import net.cf.vintageefurn.compat.everycomp.EveryCompatLoader;
+import net.cf.vintageefurn.network.BeamsNetworking;
+import net.cf.vintageefurn.registry.BeamsBlockEntities;
+import net.cf.vintageefurn.registry.BeamsBlocks;
+import net.cf.vintageefurn.registry.BeamsCreativeTab;
+import net.cf.vintageefurn.registry.BeamsItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
