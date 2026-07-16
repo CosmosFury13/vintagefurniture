@@ -1,8 +1,10 @@
 package net.cf.vintageefurn.network;
 
-package com.syl.beams.network;
 
 import net.cf.vintageefurn.VintageFurn;
+import net.cf.vintageefurn.network.beam.BeamBreakRequestPayload;
+import net.cf.vintageefurn.network.beam.BeamCancelPayload;
+import net.cf.vintageefurn.network.beam.BeamSyncPayload;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;

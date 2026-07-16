@@ -45,7 +45,7 @@ public class VintageFurn {
         modEventBus.addListener(this::addCreative);
 
         // Networking registration
-        modEventBus.addListener(BeamsNetworking::register);
+        BeamsNetworking.register();
 
         // Register this class on the Forge event bus
         MinecraftForge.EVENT_BUS.register(this);
