@@ -39,7 +39,6 @@ public class VintageFurn {
         BeamsCreativeTab.TABS.register(modEventBus);
 
         // If this exists in your project and is already ported to Forge
-        BeamsAttachments.register(modEventBus);
 
         // Lifecycle listeners
         modEventBus.addListener(this::commonSetup);
