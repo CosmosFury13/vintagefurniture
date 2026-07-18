@@ -1,6 +1,7 @@
 package net.cf.vintageefurn.targeting;
 
 import net.cf.vintageefurn.blockentities.BeamBlockEntity;
+import net.cf.vintageefurn.blocks.beam.BeamAnchorBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
