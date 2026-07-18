@@ -3,8 +3,6 @@ package net.cf.vintageefurn.event;
 import net.cf.vintageefurn.VintageFurn;
 import net.cf.vintageefurn.blockentities.BeamBlockEntity;
 import net.cf.vintageefurn.blocks.beam.BeamAnchorBlock;
-import net.cf.vintageefurn.compat.sable.SableCompat;
-import net.cf.vintageefurn.compat.sable.SableRayCompat;
 import net.cf.vintageefurn.registry.BeamsItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -81,14 +79,6 @@ public final class BeamBreakHandler {
 
         Vec3 localOrigin = origin;
         Vec3 localEnd = end;
-
-        if (SableCompat.isLoaded()) {
-            Vec3[] localized = SableRayCompat.localizeFor(level, pos, origin, end);
-            if (localized != null) {
-                localOrigin = localized[0];
-                localEnd = localized[1];
-            }
-        }
 
         BeamBlockEntity.BeamLink target =
                 BeamAnchorBlock.findTargetedLink(pos, be, localOrigin, localEnd);

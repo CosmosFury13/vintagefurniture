@@ -1,4 +1,13 @@
 package net.cf.vintageefurn.compat.create;
 
-public class CreateCompat {
+
+import net.minecraftforge.fml.ModList;
+
+public final class CreateCompat {
+
+    private CreateCompat() {}
+
+    public static boolean isLoaded() {
+        return ModList.get().isLoaded("create");
+    }
 }

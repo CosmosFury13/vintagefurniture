@@ -7,8 +7,6 @@ import net.cf.vintageefurn.BeamsConfig;
 import net.cf.vintageefurn.VintageFurn;
 import net.cf.vintageefurn.attachment.BeamPlacementData;
 import net.cf.vintageefurn.attachment.BeamsAttachments;
-import net.cf.vintageefurn.compat.sable.SableCompat;
-import net.cf.vintageefurn.compat.sable.SableRayCompat;
 import net.cf.vintageefurn.items.BeamItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -134,25 +132,7 @@ public final class BeamGhostRenderer {
         Vec3 renderStart = startWorld;
         Vec3 renderTarget = lookTarget;
 
-        if (SableCompat.isLoaded()) {
-            float partialTick = event.getPartialTick();
-
-            renderStart = SableRayCompat.toRenderSpace(
-                    mc.level,
-                    pending.anchorBlockPos(),
-                    partialTick,
-                    startWorld
-            );
-
-            if (hit instanceof BlockHitResult bhr2) {
-                renderTarget = SableRayCompat.toRenderSpace(
-                        mc.level,
-                        bhr2.getBlockPos(),
-                        partialTick,
-                        lookTarget
-                );
-            }
-        }
+        
 
         Vec3 cam = event.getCamera().getPosition();
 
