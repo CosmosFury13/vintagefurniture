@@ -105,29 +105,33 @@ public final class BeamPrismRenderer {
             int packedLight = LevelRenderer.getLightColor(level, resolveLightPos(level, q.basePos()));
 
             consumer.vertex(pose, (float) q.p0().x, (float) q.p0().y, (float) q.p0().z)
-                    .setColor(q.cr(), q.cg(), q.cb(), alpha)
-                    .setUv(q.u0(), q.v0())
-                    .setOverlay(OverlayTexture.NO_OVERLAY)
-                    .setLight(packedLight)
-                    .setNormal(poseEntry, q.nx(), q.ny(), q.nz());
+                    .color(q.cr(), q.cg(), q.cb(), alpha)
+                    .uv(q.u0(), q.v0())
+                    .overlayCoords(OverlayTexture.NO_OVERLAY)
+                    .uv2(packedLight)
+                    .normal(poseEntry.normal(), q.nx(), q.ny(), q.nz())
+                    .endVertex();
             consumer.vertex(pose, (float) q.p1().x, (float) q.p1().y, (float) q.p1().z)
-                    .setColor(q.cr(), q.cg(), q.cb(), alpha)
-                    .setUv(q.u1(), q.v1())
-                    .setOverlay(OverlayTexture.NO_OVERLAY)
-                    .setLight(packedLight)
-                    .setNormal(poseEntry, q.nx(), q.ny(), q.nz());
+                    .color(q.cr(), q.cg(), q.cb(), alpha)
+                    .uv(q.u1(), q.v1())
+                    .overlayCoords(OverlayTexture.NO_OVERLAY)
+                    .uv2(packedLight)
+                    .normal(poseEntry.normal(), q.nx(), q.ny(), q.nz())
+                    .endVertex();
             consumer.vertex(pose, (float) q.p2().x, (float) q.p2().y, (float) q.p2().z)
-                    .setColor(q.cr(), q.cg(), q.cb(), alpha)
-                    .setUv(q.u2(), q.v2())
-                    .setOverlay(OverlayTexture.NO_OVERLAY)
-                    .setLight(packedLight)
-                    .setNormal(poseEntry, q.nx(), q.ny(), q.nz());
+                    .color(q.cr(), q.cg(), q.cb(), alpha)
+                    .uv(q.u2(), q.v2())
+                    .overlayCoords(OverlayTexture.NO_OVERLAY)
+                    .uv2(packedLight)
+                    .normal(poseEntry.normal(), q.nx(), q.ny(), q.nz())
+                    .endVertex();
             consumer.vertex(pose, (float) q.p3().x, (float) q.p3().y, (float) q.p3().z)
-                    .setColor(q.cr(), q.cg(), q.cb(), alpha)
-                    .setUv(q.u3(), q.v3())
-                    .setOverlay(OverlayTexture.NO_OVERLAY)
-                    .setLight(packedLight)
-                    .setNormal(poseEntry, q.nx(), q.ny(), q.nz());
+                    .color(q.cr(), q.cg(), q.cb(), alpha)
+                    .uv(q.u3(), q.v3())
+                    .overlayCoords(OverlayTexture.NO_OVERLAY)
+                    .uv2(packedLight)
+                    .normal(poseEntry.normal(), q.nx(), q.ny(), q.nz())
+                    .endVertex();
         }
     }
 
@@ -147,29 +151,33 @@ public final class BeamPrismRenderer {
             int packedLight = LevelRenderer.getLightColor(realLevel, realPos);
 
             consumer.vertex(pose, (float) q.p0().x, (float) q.p0().y, (float) q.p0().z)
-                    .setColor(q.cr(), q.cg(), q.cb(), alpha)
-                    .setUv(q.u0(), q.v0())
-                    .setOverlay(OverlayTexture.NO_OVERLAY)
-                    .setLight(packedLight)
-                    .setNormal(poseEntry, q.nx(), q.ny(), q.nz());
+                    .color(q.cr(), q.cg(), q.cb(), alpha)
+                    .uv(q.u0(), q.v0())
+                    .overlayCoords(OverlayTexture.NO_OVERLAY)
+                    .uv2(packedLight)
+                    .normal(poseEntry.normal(), q.nx(), q.ny(), q.nz())
+                    .endVertex();
             consumer.vertex(pose, (float) q.p1().x, (float) q.p1().y, (float) q.p1().z)
-                    .setColor(q.cr(), q.cg(), q.cb(), alpha)
-                    .setUv(q.u1(), q.v1())
-                    .setOverlay(OverlayTexture.NO_OVERLAY)
-                    .setLight(packedLight)
-                    .setNormal(poseEntry, q.nx(), q.ny(), q.nz());
+                    .color(q.cr(), q.cg(), q.cb(), alpha)
+                    .uv(q.u1(), q.v1())
+                    .overlayCoords(OverlayTexture.NO_OVERLAY)
+                    .uv2(packedLight)
+                    .normal(poseEntry.normal(), q.nx(), q.ny(), q.nz())
+                    .endVertex();
             consumer.vertex(pose, (float) q.p2().x, (float) q.p2().y, (float) q.p2().z)
-                    .setColor(q.cr(), q.cg(), q.cb(), alpha)
-                    .setUv(q.u2(), q.v2())
-                    .setOverlay(OverlayTexture.NO_OVERLAY)
-                    .setLight(packedLight)
-                    .setNormal(poseEntry, q.nx(), q.ny(), q.nz());
+                    .color(q.cr(), q.cg(), q.cb(), alpha)
+                    .uv(q.u2(), q.v2())
+                    .overlayCoords(OverlayTexture.NO_OVERLAY)
+                    .uv2(packedLight)
+                    .normal(poseEntry.normal(), q.nx(), q.ny(), q.nz())
+                    .endVertex();
             consumer.vertex(pose, (float) q.p3().x, (float) q.p3().y, (float) q.p3().z)
-                    .setColor(q.cr(), q.cg(), q.cb(), alpha)
-                    .setUv(q.u3(), q.v3())
-                    .setOverlay(OverlayTexture.NO_OVERLAY)
-                    .setLight(packedLight)
-                    .setNormal(poseEntry, q.nx(), q.ny(), q.nz());
+                    .color(q.cr(), q.cg(), q.cb(), alpha)
+                    .uv(q.u3(), q.v3())
+                    .overlayCoords(OverlayTexture.NO_OVERLAY)
+                    .uv2(packedLight)
+                    .normal(poseEntry.normal(), q.nx(), q.ny(), q.nz())
+                    .endVertex();
         }
     }
 

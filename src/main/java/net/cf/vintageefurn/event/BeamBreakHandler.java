@@ -17,6 +17,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.common.ForgeMod;
 
 import java.util.Map;
 import java.util.UUID;
@@ -75,7 +76,8 @@ public final class BeamBreakHandler {
 
         Vec3 origin = sp.getEyePosition(1.0F);
         Vec3 look = sp.getViewVector(1.0F);
-        Vec3 end = origin.add(look.scale(sp.blockInteractionRange()));
+        double reach = sp.getAttributeValue(ForgeMod.BLOCK_REACH.get());
+        Vec3 end = origin.add(look.scale(reach));
 
         Vec3 localOrigin = origin;
         Vec3 localEnd = end;

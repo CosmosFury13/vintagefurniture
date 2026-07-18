@@ -1,4 +1,5 @@
 package net.cf.vintageefurn.blockentities;
+import net.cf.vintageefurn.registry.BeamsBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -28,8 +29,8 @@ public class BeamBlockEntity extends BlockEntity {
 
     private BlockPos capturedAnchorPos = null;
 
-    public BeamBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
-        super(type, pos, state);
+    public BeamBlockEntity(BlockPos pos, BlockState state) {
+        super(BeamsBlockEntities.BEAM_ANCHOR.get(), pos, state);
     }
 
     private static final java.util.Set<BeamBlockEntity> CLIENT_INSTANCES =

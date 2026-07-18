@@ -15,7 +15,7 @@ public final class BeamsBlockEntities {
     public static final RegistryObject<BlockEntityType<BeamBlockEntity>> BEAM_ANCHOR =
             BLOCK_ENTITIES.register("beam_anchor",
                     () -> BlockEntityType.Builder.of(
-                            (pos, state) -> new BeamBlockEntity(BEAM_ANCHOR.get(), pos, state),
+                            BeamBlockEntity::new,
                             BeamsBlocks.BEAM_ANCHOR.get()
                     ).build(null)
             );

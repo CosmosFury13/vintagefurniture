@@ -43,7 +43,7 @@ public final class BeamsItems {
     }
 
     public static Item getBeamItem(String woodType) {
-        RegistryObject<BeamItem> item = Item.get(woodType);
+        RegistryObject<BeamItem> item = BEAM_ITEMS.get(woodType);
 
         if (item != null) {
             return item.get();

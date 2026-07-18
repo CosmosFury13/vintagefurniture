@@ -25,7 +25,7 @@ public record BeamPlacementData(
         return new BeamPlacementData(pos, face, u, v, d, -1, pos.relative(face), "");
     }
 
-    public BeamPlacementData withPlacement(int linkId, BlockPos resolvedAnchorPos, String woodType) {
+    public BeamPlacementData setPlacement(int linkId, BlockPos resolvedAnchorPos, String woodType) {
         return new BeamPlacementData(pos, face, u, v, d, linkId, resolvedAnchorPos, woodType);
     }
 

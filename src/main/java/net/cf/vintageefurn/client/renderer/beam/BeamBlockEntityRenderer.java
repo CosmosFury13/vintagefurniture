@@ -146,12 +146,5 @@ public class BeamBlockEntityRenderer implements BlockEntityRenderer<BeamBlockEnt
         return 256;
     }
 
-    @Override
-    public AABB getRenderBoundingBox(BeamBlockEntity be) {
-        boolean ownsGeometry = be.getLinks().stream().anyMatch(l -> l.isStart && l.otherVec != null);
-        if (!ownsGeometry) {
-            return BlockEntityRenderer.super.getRenderBoundingBox(be);
-        }
-        return be.getCachedRenderBounds();
-    }
+
 }

@@ -4,6 +4,7 @@ import net.cf.vintageefurn.attachment.BeamPlacementData;
 import net.cf.vintageefurn.attachment.BeamsAttachments;
 import net.cf.vintageefurn.blockentities.BeamBlockEntity;
 import net.cf.vintageefurn.blocks.beam.BeamAnchorBlock;
+import net.cf.vintageefurn.network.BeamsNetworking;
 import net.cf.vintageefurn.network.beam.BeamSyncPayload;
 import net.cf.vintageefurn.registry.BeamsBlocks;
 import net.minecraft.core.BlockPos;
@@ -71,7 +72,7 @@ public class BeamItem extends Item {
 
         // Replace this with however your Forge capability exposes the pending placement.
         Optional<BeamPlacementData> existing =
-                BeamsAttachments.get(sp).getPlacement();
+                BeamsAttachments.get(sp.getUUID()).setPlacement();
 
         if (existing.isEmpty()) {
             return placeStart(sp, level, ctx, clicked);
@@ -86,7 +87,7 @@ public class BeamItem extends Item {
     }
 
     public static BlockHitResult raytraceSkippingAnchors(Level level, Player player) {
-        double reach = player.blockInteractionRange();
+        double reach = 5.0D;
         Vec3 eye = player.getEyePosition(1.0F);
         Vec3 look = player.getViewVector(1.0F);
         Vec3 to = eye.add(look.scale(reach));
@@ -241,7 +242,7 @@ public class BeamItem extends Item {
 
         int linkId = startBE.addStartLink(clicked.toWorldVec3(), woodType);
         BeamPlacementData pending =
-                clicked.withPlacement(linkId, anchorPos, woodType);
+                clicked.setPlacement(linkId, anchorPos, woodType);
 
         level.playSound(
                 null,
@@ -253,10 +254,11 @@ public class BeamItem extends Item {
         );
 
         // Replace with your Forge capability implementation
-        BeamsAttachments.get(sp).setPlacement(Optional.of(pending));
+        BeamsAttachments.set(sp.getUUID(), pending);
 
-        PacketDistributor.PLAYER.with(() -> sp)
-                .send(new BeamSyncPayload(Optional.of(pending)));
+        BeamsNetworking.CHANNEL.send(
+                PacketDistributor.PLAYER.with(() -> sp),
+                new BeamSyncPayload(Optional.of(pending)));
 
         return InteractionResult.CONSUME;
     }
@@ -304,10 +306,11 @@ public class BeamItem extends Item {
         if (!(level.getBlockEntity(startAnchorPos) instanceof BeamBlockEntity startBE)
                 || startBE.findLink(start.linkId()).isEmpty()) {
 
-            BeamsAttachments.get(sp).setPlacement(Optional.empty());
+            BeamsAttachments.set(sp.getUUID(), null);
 
-            PacketDistributor.PLAYER.with(() -> sp)
-                    .send(new BeamSyncPayload(Optional.empty()));
+            BeamsNetworking.CHANNEL.send(
+                    PacketDistributor.PLAYER.with(() -> sp),
+                    new BeamSyncPayload(Optional.empty()));
 
             return InteractionResult.FAIL;
         }
@@ -358,10 +361,11 @@ public class BeamItem extends Item {
             stack.shrink(itemsNeeded);
         }
 
-        BeamsAttachments.get(sp).setPlacement(Optional.empty());
+        BeamsAttachments.set(sp.getUUID(), null);
 
-        PacketDistributor.PLAYER.with(() -> sp)
-                .send(new BeamSyncPayload(Optional.empty()));
+        BeamsNetworking.CHANNEL.send(
+                PacketDistributor.PLAYER.with(() -> sp),
+                new BeamSyncPayload(Optional.empty()));
 
         return InteractionResult.CONSUME;
     }
@@ -369,7 +373,7 @@ public class BeamItem extends Item {
     public static boolean cancelPending(ServerPlayer sp) {
         // Replace with your Forge capability implementation
         Optional<BeamPlacementData> existing =
-                BeamsAttachments.get(sp).getPlacement();
+                BeamsAttachments.set(sp.getUUID(), null);
 
         if (existing.isEmpty()) {
             return false;
@@ -386,10 +390,11 @@ public class BeamItem extends Item {
             }
         }
 
-        BeamsAttachments.get(sp).setPlacement(Optional.empty());
+        BeamsAttachments.set(sp.getUUID(), null);
 
-        PacketDistributor.PLAYER.with(() -> sp)
-                .send(new BeamSyncPayload(Optional.empty()));
+        BeamsNetworking.CHANNEL.send(
+                PacketDistributor.PLAYER.with(() -> sp),
+                new BeamSyncPayload(Optional.empty()));
 
         return true;
     }

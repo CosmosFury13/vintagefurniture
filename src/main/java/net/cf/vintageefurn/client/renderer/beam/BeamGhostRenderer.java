@@ -64,16 +64,13 @@ public final class BeamGhostRenderer {
         if (!(held.getItem() instanceof BeamItem beamItem))
             return;
 
-        Optional<BeamPlacementData> pendingOpt =
-                BeamsAttachments.get(player.getUUID());
+        BeamPlacementData pending = BeamsAttachments.get(player.getUUID());
 
-        if (pendingOpt.isEmpty()) {
+        if (pending == null) {
             lastQuadCount = -1;
             currentPitch = BASE_PITCH;
             return;
         }
-
-        BeamPlacementData pending = pendingOpt.get();
 
         if (mc.level == null)
             return;
@@ -132,7 +129,7 @@ public final class BeamGhostRenderer {
         Vec3 renderStart = startWorld;
         Vec3 renderTarget = lookTarget;
 
-        
+
 
         Vec3 cam = event.getCamera().getPosition();
 

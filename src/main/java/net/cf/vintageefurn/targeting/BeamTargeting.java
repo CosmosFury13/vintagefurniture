@@ -70,7 +70,7 @@ public final class BeamTargeting {
                 to,
                 ClipContext.Block.COLLIDER,
                 ClipContext.Fluid.NONE,
-                CollisionContext.empty()
+                null
         );
 
         BlockHitResult result = level.clip(ctx);

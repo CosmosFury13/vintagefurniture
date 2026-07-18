@@ -2,7 +2,6 @@ package net.cf.vintageefurn.registry;
 
 import net.cf.vintageefurn.VintageFurn;
 import net.cf.vintageefurn.blocks.beam.BeamAnchorBlock;
-import net.cf.vintageefurn.compat.sable.SableCompat;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -20,9 +19,7 @@ public final class BeamsBlocks {
     public static final RegistryObject<BeamAnchorBlock> BEAM_ANCHOR =
             BLOCKS.register(
                     "beam_anchor",
-                    () -> SableCompat.isLoaded()
-                            ? SableCompat.createAnchorBlock(beamAnchorProperties())
-                            : new BeamAnchorBlock(beamAnchorProperties())
+                    () -> new BeamAnchorBlock(beamAnchorProperties())
             );
 
     private static BlockBehaviour.Properties beamAnchorProperties() {
