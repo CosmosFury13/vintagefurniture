@@ -1,0 +1,19 @@
+{
+  "itemGroup.beams": "Vintage Furnishing",
+  "block.vintagefurn.beam_anchor": "Beam",
+  "tag.item.beams.beams": "Beams",
+  "item.vintagefurn.beams.not_enough": "Need %s more %s",
+  "item.vintagefurn.beams.not_enough.plural": "Need %s more %ss",
+  "item.vintagefurn.beam.cross_structure": "Can't link a beam between an assembled structure and the ground",
+  "item.vintagefurn.beam_oak": "Oak Beam",
+  "item.vintagefurn.beam_spruce": "Spruce Beam",
+  "item.vintagefurn.beam_birch": "Birch Beam",
+  "item.vintagefurn.beam_jungle": "Jungle Beam",
+  "item.vintagefurn.beam_acacia": "Acacia Beam",
+  "item.vintagefurn.beam_dark_oak": "Dark Oak Beam",
+  "item.vintagefurn.beam_mangrove": "Mangrove Beam",
+  "item.vintagefurn.beam_cherry": "Cherry Beam",
+  "item.vintagefurn.beam_crimson": "Crimson Beam",
+  "item.vintagefurn.beam_warped": "Warped Beam",
+  "item.vintagefurn.beam_bamboo": "Bamboo Beam"
+}

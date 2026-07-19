@@ -26,7 +26,7 @@ public final class BeamsBlocks {
         return BlockBehaviour.Properties.of()
                 .mapColor(MapColor.WOOD)
                 .sound(SoundType.WOOD)
-                .strength(2.0F, 3.0F)
+                .strength(1.0F, 2.0F)
                 .noOcclusion()
                 .noCollission()
                 .isValidSpawn((state, level, pos, entityType) -> false)

@@ -75,10 +75,17 @@ public final class BeamPrismRenderer {
             Vec3 centerlineWorld = worldOrigin.add(startLocal).add(axisDir.scale(t));
             BlockPos basePos = BlockPos.containing(centerlineWorld);
 
-            float u0 = sprite.getU(uv[0][0]), v0 = sprite.getV(uv[0][1]);
-            float u1 = sprite.getU(uv[1][0]), v1 = sprite.getV(uv[1][1]);
-            float u2 = sprite.getU(uv[2][0]), v2 = sprite.getV(uv[2][1]);
-            float u3 = sprite.getU(uv[3][0]), v3 = sprite.getV(uv[3][1]);
+            float u0 = sprite.getU(uv[0][0] * 16.0F);
+            float v0 = sprite.getV(uv[0][1] * 16.0F);
+
+            float u1 = sprite.getU(uv[1][0] * 16.0F);
+            float v1 = sprite.getV(uv[1][1] * 16.0F);
+
+            float u2 = sprite.getU(uv[2][0] * 16.0F);
+            float v2 = sprite.getV(uv[2][1] * 16.0F);
+
+            float u3 = sprite.getU(uv[3][0] * 16.0F);
+            float v3 = sprite.getV(uv[3][1] * 16.0F);
 
             out.add(new CachedQuad(
                     p[0], p[1], p[2], p[3],

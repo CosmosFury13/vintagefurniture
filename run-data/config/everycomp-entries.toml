@@ -1,0 +1,13 @@
+
+#Disables specific entries
+[entries]
+
+	[entries.wood_type]
+
+		[entries.wood_type.vintagefurn]
+			beam = true
+
+		[entries.wood_type.create]
+			window_pane = true
+			window = true
+

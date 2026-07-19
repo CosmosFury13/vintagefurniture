@@ -60,6 +60,9 @@ public final class BeamsItems {
     public static Item getOakBeamItem() {
         return BEAM_ITEMS.get("oak").get();
     }
+    public static Map<String, RegistryObject<BeamItem>> getBeamItems() {
+        return BEAM_ITEMS;
+    }
 
     private BeamsItems() {
     }

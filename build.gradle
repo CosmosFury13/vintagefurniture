@@ -161,6 +161,12 @@ dependencies {
 
     // Every Compat
     implementation fg.deobf("curse.maven:every-compat-628539:8332989")
+//    implementation fg.deobf("curse.maven:oh-the-biomes-weve-gone-1070751:8255932")
+//    implementation fg.deobf("curse.maven:corgilib-693313:6616784")
+//    implementation fg.deobf("curse.maven:geckolib-388172:8285794")
+//    implementation fg.deobf("curse.maven:oh-the-trees-youll-grow-962544:8282239")
+//    implementation fg.deobf("curse.maven:terrablender-563928:6290448")
+
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
