@@ -44,11 +44,10 @@ public final class BeamHeldItemWatcher {
 
         if (to.getItem() instanceof BeamItem beamItem) {
 
-            Optional<BeamPlacementData> pending =
-                    sp.getData(BeamsAttachments.BEAM_PLACEMENT);
+            BeamPlacementData pending = BeamsAttachments.get(sp.getUUID());
 
-            if (pending.isPresent()
-                    && !pending.get().woodType().equals(beamItem.getWoodType())) {
+            if (pending != null
+                    && !pending.woodType().equals(beamItem.getWoodType())) {
                 BeamItem.cancelPending(sp);
             }
 

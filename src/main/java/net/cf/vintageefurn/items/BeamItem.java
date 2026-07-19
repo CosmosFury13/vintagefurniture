@@ -71,19 +71,18 @@ public class BeamItem extends Item {
         );
 
         // Replace this with however your Forge capability exposes the pending placement.
-        Optional<BeamPlacementData> existing =
-                BeamsAttachments.get(sp.getUUID()).setPlacement();
+        BeamPlacementData existing = BeamsAttachments.get(sp.getUUID());
 
-        if (existing.isEmpty()) {
+        if (existing == null) {
             return placeStart(sp, level, ctx, clicked);
         }
 
-        if (!woodType.equals(existing.get().woodType())) {
+        if (!woodType.equals(existing.woodType())) {
             cancelPending(sp);
             return InteractionResult.FAIL;
         }
 
-        return placeEnd(sp, level, ctx, existing.get(), clicked);
+        return placeEnd(sp, level, ctx, existing, clicked);
     }
 
     public static BlockHitResult raytraceSkippingAnchors(Level level, Player player) {
@@ -371,15 +370,12 @@ public class BeamItem extends Item {
     }
 
     public static boolean cancelPending(ServerPlayer sp) {
-        // Replace with your Forge capability implementation
-        Optional<BeamPlacementData> existing =
-                BeamsAttachments.set(sp.getUUID(), null);
+        BeamPlacementData pending = BeamsAttachments.get(sp.getUUID());
 
-        if (existing.isEmpty()) {
+        if (pending == null) {
             return false;
         }
 
-        BeamPlacementData pending = existing.get();
         BlockPos startPos = pending.anchorBlockPos();
 
         if (sp.level().getBlockEntity(startPos) instanceof BeamBlockEntity startBE) {
@@ -390,11 +386,12 @@ public class BeamItem extends Item {
             }
         }
 
-        BeamsAttachments.set(sp.getUUID(), null);
+        BeamsAttachments.clear(sp.getUUID());
 
         BeamsNetworking.CHANNEL.send(
                 PacketDistributor.PLAYER.with(() -> sp),
-                new BeamSyncPayload(Optional.empty()));
+                new BeamSyncPayload(Optional.empty())
+        );
 
         return true;
     }

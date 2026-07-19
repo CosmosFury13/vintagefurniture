@@ -188,7 +188,7 @@ public class BeamAnchorBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new BeamBlockEntity(BeamsBlockEntities.BEAM_ANCHOR.get(), pos, state);
+        return new BeamBlockEntity(pos, state);
     }
 
     @Nullable
