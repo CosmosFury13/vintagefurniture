@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "P": {
+      "item": "minecraft:cherry_planks"
+    }
+  },
+  "pattern": [
+    "  P",
+    " P ",
+    "P  "
+  ],
+  "result": {
+    "count": 8,
+    "item": "vintagefurn:beam_cherry"
+  },
+  "show_notification": true
+}

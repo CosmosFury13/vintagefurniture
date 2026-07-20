@@ -15,5 +15,16 @@
   "item.vintagefurn.beam_cherry": "Cherry Beam",
   "item.vintagefurn.beam_crimson": "Crimson Beam",
   "item.vintagefurn.beam_warped": "Warped Beam",
-  "item.vintagefurn.beam_bamboo": "Bamboo Beam"
+  "item.vintagefurn.beam_bamboo": "Bamboo Beam",
+  "item.vintagefurn.beam_oak_log": "Oak Log Beam",
+  "item.vintagefurn.beam_spruce_log": "Spruce Log Beam",
+  "item.vintagefurn.beam_birch_log": "Birch Log Beam",
+  "item.vintagefurn.beam_jungle_log": "Jungle Log Beam",
+  "item.vintagefurn.beam_acacia_log": "Acacia Log Beam",
+  "item.vintagefurn.beam_dark_oak_log": "Dark Oak Log Beam",
+  "item.vintagefurn.beam_mangrove_log": "Mangrove Log Beam",
+  "item.vintagefurn.beam_cherry_log": "Cherry Log Beam",
+  "item.vintagefurn.beam_crimson_log": "Crimson Stem Beam",
+  "item.vintagefurn.beam_warped_log": "Warped Stem Beam",
+  "item.vintagefurn.beam_bamboo_log": "Bamboo Block Beam"
 }

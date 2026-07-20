@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "rewards": {
-    "recipes": [ "beams:beam_acacia" ]
+    "recipes": [ "vintagefurn:beam_acacia" ]
   },
   "criteria": {
     "has_acacia_planks": {

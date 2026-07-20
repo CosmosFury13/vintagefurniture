@@ -1,12 +1,8 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    { "item": "minecraft:mangrove_planks" },
-    { "tag": "c:rods/wooden" }
-  ],
-  "result": {
-    "id": "beams:beam_mangrove",
-    "count": 4
-  }
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:mangrove_planks"
+  },
+  "result": "vintagefurn:beam_mangrove",
+  "count": 8
 }

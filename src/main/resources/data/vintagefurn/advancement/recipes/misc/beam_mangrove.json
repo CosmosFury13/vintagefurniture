@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "rewards": {
-    "recipes": [ "beams:beam_mangrove" ]
+    "recipes": [ "vintagefurn:beam_mangrove" ]
   },
   "criteria": {
     "has_mangrove_planks": {

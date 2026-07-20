@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "rewards": {
-    "recipes": [ "beams:beam_dark_oak" ]
+    "recipes": [ "vintagefurn:beam_dark_oak" ]
   },
   "criteria": {
     "has_dark_oak_planks": {

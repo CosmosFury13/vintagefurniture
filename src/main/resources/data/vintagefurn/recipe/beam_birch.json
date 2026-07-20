@@ -1,12 +1,8 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    { "item": "minecraft:birch_planks" },
-    { "tag": "c:rods/wooden" }
-  ],
-  "result": {
-    "id": "beams:beam_birch",
-    "count": 4
-  }
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:birch_planks"
+  },
+  "result": "vintagefurn:beam_birch",
+  "count": 8
 }

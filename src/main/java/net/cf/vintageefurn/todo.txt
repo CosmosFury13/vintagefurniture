@@ -1,0 +1,10 @@
+--Beams
+- make log textured beams
+- make stripped log beam
+- make some stone textured beam - called supports not beams
+- make colored beam like concrete
+- maybe make copycat beam
+--railings
+- migrate railings here
+- add variants
+- make copycats

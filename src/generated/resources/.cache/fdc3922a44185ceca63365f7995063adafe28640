@@ -1,4 +1,5 @@
-// 1.20.1	2026-07-19T19:28:19.3818695	Tags for minecraft:block mod id vintagefurn
+// 1.20.1	2026-07-20T14:06:31.8617209	Tags for minecraft:block mod id vintagefurn
+2a5599b257b5c445ff2d270eb36b46843b8bf572 data/create/tags/blocks/moveable_empty_collider.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/fences.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/fence_gates.json

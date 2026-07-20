@@ -1,12 +1,8 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    { "item": "minecraft:crimson_planks" },
-    { "tag": "c:rods/wooden" }
-  ],
-  "result": {
-    "id": "beams:beam_crimson",
-    "count": 4
-  }
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:crimson_planks"
+  },
+  "result": "vintagefurn:beam_crimson",
+  "count": 8
 }

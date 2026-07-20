@@ -1,12 +1,8 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    { "item": "minecraft:cherry_planks" },
-    { "tag": "c:rods/wooden" }
-  ],
-  "result": {
-    "id": "beams:beam_cherry",
-    "count": 4
-  }
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:cherry_planks"
+  },
+  "result": "vintagefurn:beam_cherry",
+  "count": 8
 }

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "rewards": {
-    "recipes": [ "beams:beam_warped" ]
+    "recipes": [ "vintagefurn:beam_warped" ]
   },
   "criteria": {
     "has_warped_planks": {

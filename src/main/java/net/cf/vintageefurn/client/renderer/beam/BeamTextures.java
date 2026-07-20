@@ -23,4 +23,16 @@ public final class BeamTextures {
                 .getAtlas(TextureAtlas.LOCATION_BLOCKS)
                 .getSprite(loc);
     }
+    public static TextureAtlasSprite logSprite(String woodType) {
+        ResourceLocation loc = BeamsWoodTypeRegistry.getTexture(woodType);
+
+        if (loc == null) {
+            loc = new ResourceLocation("minecraft", "block/" + woodType + "_log");
+        }
+
+        return Minecraft.getInstance()
+                .getModelManager()
+                .getAtlas(TextureAtlas.LOCATION_BLOCKS)
+                .getSprite(loc);
+    }
 }

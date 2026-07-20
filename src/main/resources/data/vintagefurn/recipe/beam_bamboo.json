@@ -1,12 +1,8 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    { "item": "minecraft:bamboo_planks" },
-    { "tag": "c:rods/wooden" }
-  ],
-  "result": {
-    "id": "beams:beam_bamboo",
-    "count": 4
-  }
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:bamboo_planks"
+  },
+  "result": "vintagefurn:beam_bamboo",
+  "count": 8
 }
