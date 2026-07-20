@@ -1,0 +1,7 @@
+{
+  "parent": "vintagefurn:block/railing/template_arched_railing",
+  "textures": {
+    "base": "vintagefurn:block/create/stone_types/cut/andesite_cut",
+    "rail": "minecraft:block/oak_planks"
+  }
+}

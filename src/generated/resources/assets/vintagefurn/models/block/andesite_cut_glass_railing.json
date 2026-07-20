@@ -1,0 +1,10 @@
+{
+  "parent": "vintagefurn:block/railing/template_glass_railing",
+  "textures": {
+    "base": "vintagefurn:block/create/stone_types/cut/andesite_cut",
+    "glass": "minecraft:block/glass",
+    "glass_edge": "minecraft:block/glass_pane_top",
+    "holder": "minecraft:block/oak_planks",
+    "rail": "minecraft:block/oak_planks"
+  }
+}

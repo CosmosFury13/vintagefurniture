@@ -2,7 +2,9 @@ package net.cf.vintageefurn.registry;
 
 import net.cf.vintageefurn.VintageFurn;
 import net.cf.vintageefurn.blocks.beam.BeamAnchorBlock;
+import net.cf.vintageefurn.blocks.railing.RailingBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -21,6 +23,8 @@ public final class BeamsBlocks {
                     "beam_anchor",
                     () -> new BeamAnchorBlock(beamAnchorProperties())
             );
+    public static final RegistryObject<Block> ANDESITE_CUT_GLASS_RAILING = BLOCKS.register("andesite_cut_glass_railing",
+            () -> new RailingBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0f).noOcclusion()));
 
     private static BlockBehaviour.Properties beamAnchorProperties() {
         return BlockBehaviour.Properties.of()

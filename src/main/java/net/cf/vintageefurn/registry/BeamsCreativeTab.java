@@ -20,9 +20,13 @@ public final class BeamsCreativeTab {
                             .title(Component.translatable("itemGroup.beams"))
                             .icon(() -> new ItemStack(BeamsItems.getBeamItem("oak")))
                             .displayItems((parameters, output) -> {
+                                // Beams
                                 for (String wood : BeamsItems.WOOD_TYPES) {
                                     output.accept(BeamsItems.getBeamItem(wood));
                                 }
+
+                                // Railings
+//                                output.accept(BeamsBlocks.ANDESITE_CUT_GLASS_RAILING.get());
                             })
                             .build()
             );

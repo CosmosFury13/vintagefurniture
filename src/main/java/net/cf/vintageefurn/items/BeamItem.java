@@ -289,8 +289,8 @@ public class BeamItem extends Item {
             Component beamName = new ItemStack(beamItem).getHoverName();
 
             String key = shortfall == 1
-                    ? "item.beams.beam.not_enough"
-                    : "item.beams.beam.not_enough.plural";
+                    ? "item.vintagefurn.beam.not_enough"
+                    : "item.vintagefurn.beam.not_enough.plural";
 
             sp.displayClientMessage(
                     Component.translatable(key, shortfall, beamName),

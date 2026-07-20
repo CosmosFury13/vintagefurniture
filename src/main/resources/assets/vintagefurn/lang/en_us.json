@@ -1,9 +1,9 @@
 {
   "itemGroup.beams": "Vintage Furnishing",
   "block.vintagefurn.beam_anchor": "Beam",
-  "tag.item.beams.beams": "Beams",
-  "item.vintagefurn.beams.not_enough": "Need %s more %s",
-  "item.vintagefurn.beams.not_enough.plural": "Need %s more %ss",
+  "tag.item.vintagefurn.beams": "Beams",
+  "item.vintagefurn.beam.not_enough": "Need %s more %s",
+  "item.vintagefurn.beam.not_enough.plural": "Need %s more %ss",
   "item.vintagefurn.beam.cross_structure": "Can't link a beam between an assembled structure and the ground",
   "item.vintagefurn.beam_oak": "Oak Beam",
   "item.vintagefurn.beam_spruce": "Spruce Beam",

@@ -29,6 +29,19 @@ public final class BeamsItems {
             "warped",
             "bamboo"
     };
+    public static final String[] STONE_TYPES = {
+            "andesite_cut",
+            "granite_cut",
+            "diorite_cut",
+            "limestone_cut",
+            "asurine_cut",
+            "ochrum_cut",
+            "crimsite_cut",
+            "veridium_cut",
+            "stone",
+            "mud_bricks",
+            "deepslate_tiles"
+    };
 
     private static final Map<String, RegistryObject<BeamItem>> BEAM_ITEMS = new LinkedHashMap<>();
 

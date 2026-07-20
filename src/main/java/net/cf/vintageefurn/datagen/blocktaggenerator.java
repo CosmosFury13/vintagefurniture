@@ -30,6 +30,9 @@ public class blocktaggenerator extends BlockTagsProvider {
 
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(BeamsBlocks.ANDESITE_CUT_GLASS_RAILING.get())
+//                .add(BeamsBlocks.ANDESITE_CUT_ARCHED_RAILING.get())
+//                .add(BeamsBlocks.ANDESITE_CUT_SIMPLE_RAILING.get())
                 ;
 
 
