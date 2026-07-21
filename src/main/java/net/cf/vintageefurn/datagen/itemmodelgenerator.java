@@ -30,7 +30,7 @@ public class itemmodelgenerator extends ItemModelProvider {
     @Override
     protected void registerModels() {
         BeamsItems.getBeamItems().forEach(this::beamItem);
-        railingItems("andesite_cut");
+        railingItems("stone");
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

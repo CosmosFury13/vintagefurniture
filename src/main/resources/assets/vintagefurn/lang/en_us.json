@@ -26,5 +26,8 @@
   "item.vintagefurn.beam_cherry_log": "Cherry Log Beam",
   "item.vintagefurn.beam_crimson_log": "Crimson Stem Beam",
   "item.vintagefurn.beam_warped_log": "Warped Stem Beam",
-  "item.vintagefurn.beam_bamboo_log": "Bamboo Block Beam"
+  "item.vintagefurn.beam_bamboo_log": "Bamboo Block Beam",
+
+
+  "block.vintagefurn.stone_glass_railing": "Stone Glass Railing"
 }

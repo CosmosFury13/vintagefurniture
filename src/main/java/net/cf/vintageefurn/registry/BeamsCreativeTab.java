@@ -22,11 +22,12 @@ public final class BeamsCreativeTab {
                             .displayItems((parameters, output) -> {
                                 // Beams
                                 for (String wood : BeamsItems.WOOD_TYPES) {
+                                    System.out.println("Adding beam " + wood);
                                     output.accept(BeamsItems.getBeamItem(wood));
                                 }
 
-                                // Railings
-//                                output.accept(BeamsBlocks.ANDESITE_CUT_GLASS_RAILING.get());
+                                System.out.println("Adding railing");
+                                output.accept(BeamsBlocks.STONE_GLASS_RAILING.get());
                             })
                             .build()
             );

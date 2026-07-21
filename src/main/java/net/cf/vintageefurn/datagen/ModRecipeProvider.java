@@ -1,15 +1,18 @@
 package net.cf.vintageefurn.datagen;
 
 import net.cf.vintageefurn.VintageFurn;
+import net.cf.vintageefurn.registry.BeamsBlocks;
 import net.cf.vintageefurn.registry.BeamsItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -31,7 +34,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     wood
             );
         }
+        stoneCutting(
+                writer,
+                RecipeCategory.BUILDING_BLOCKS,
+                BeamsBlocks.STONE_GLASS_RAILING.get(),
+                ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", "stone")),
+                4
+        );
     }
+
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
@@ -59,6 +70,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("P  ")
                 .define('P', planks)
                 .unlockedBy(getHasName(planks), has(planks))
+                .save(writer);
+    }
+    private static void stoneCutting(Consumer<FinishedRecipe> writer,
+                                     RecipeCategory category,
+                                     ItemLike result,
+                                     ItemLike ingredient,
+                                     int count) {
+
+        SingleItemRecipeBuilder.stonecutting(
+                        Ingredient.of(ingredient),
+                        category,
+                        result,
+                        count)
+                .unlockedBy(getHasName(ingredient), has(ingredient))
                 .save(writer);
     }
 }

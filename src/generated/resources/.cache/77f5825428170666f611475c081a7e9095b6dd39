@@ -1,4 +1,5 @@
-// 1.20.1	2026-07-20T23:03:36.5278556	Block States: vintagefurn
-e5592a5e209e80bec76adb8378d17fd00e6e232c assets/vintagefurn/models/block/andesite_cut_arched_railing.json
-64628f6307655b7380873725a814b5a62348a1fc assets/vintagefurn/models/block/andesite_cut_glass_railing.json
-e5592a5e209e80bec76adb8378d17fd00e6e232c assets/vintagefurn/models/block/andesite_cut_simple_railing.json
+// 1.20.1	2026-07-21T20:05:01.1257216	Block States: vintagefurn
+88e707d513a5400a332856f206a6f39f25bf4de4 assets/vintagefurn/blockstates/stone_glass_railing.json
+807b92f989d5de7440f4b0b176c524ac68110851 assets/vintagefurn/models/block/stone_arched_railing.json
+fdcbf7bef80456258e09c80ec1045a3417be1ddc assets/vintagefurn/models/block/stone_glass_railing.json
+807b92f989d5de7440f4b0b176c524ac68110851 assets/vintagefurn/models/block/stone_simple_railing.json

@@ -1,7 +1,4 @@
-// 1.20.1	2026-07-20T23:20:44.4778387	Item Models: vintagefurn
-cd1ad11ae4e08d363c3b531336f08adce91932df assets/vintagefurn/models/item/andesite_cut_arched_railing.json
-3489dcc7ae51685694160ceb29bfafa28bbc965a assets/vintagefurn/models/item/andesite_cut_glass_railing.json
-5a003caa4fa82d10dc6f6816075be05ac40852c4 assets/vintagefurn/models/item/andesite_cut_simple_railing.json
+// 1.20.1	2026-07-21T20:05:01.1207245	Item Models: vintagefurn
 55b71eebd98f2f10f416ec3d68aea6008491ea5c assets/vintagefurn/models/item/beam_acacia.json
 dbfe81a14677f8e86d2f3cdb52f93ac7d34d47e3 assets/vintagefurn/models/item/beam_bamboo.json
 52b91198ec79f8632ef1263f482a0583e865f583 assets/vintagefurn/models/item/beam_birch.json
@@ -13,3 +10,6 @@ d7f7fe30ffe30c3781edcb789df339251f5ff4f8 assets/vintagefurn/models/item/beam_man
 69f65efeebe164cd9a1fde9b76ea19ba8c7c49a0 assets/vintagefurn/models/item/beam_oak.json
 3a52bf24949c2f83096550d01d74ed4a25a4b791 assets/vintagefurn/models/item/beam_spruce.json
 dddc48555d71ab535e23f22b9acbe184e6f88008 assets/vintagefurn/models/item/beam_warped.json
+ae6d7e993e89875c1d88a97e4a5d2a34b879f147 assets/vintagefurn/models/item/stone_arched_railing.json
+cdc7845a5027f23715b9ad4527dc3be7e887b312 assets/vintagefurn/models/item/stone_glass_railing.json
+10c02d5c793407b1cc29e8d675eb7b44c1c7c9be assets/vintagefurn/models/item/stone_simple_railing.json

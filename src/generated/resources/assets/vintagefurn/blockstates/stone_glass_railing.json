@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "vintagefurn:block/andesite_cut_arched_railing",
+        "model": "vintagefurn:block/stone_glass_railing",
         "y": 90
       },
       "when": {
@@ -11,8 +11,8 @@
     },
     {
       "apply": {
-        "model": "vintagefurn:block/andesite_cut_arched_railing",
-        "y": -90
+        "model": "vintagefurn:block/stone_glass_railing",
+        "y": 270
       },
       "when": {
         "south": "true"
@@ -20,7 +20,7 @@
     },
     {
       "apply": {
-        "model": "vintagefurn:block/andesite_cut_arched_railing",
+        "model": "vintagefurn:block/stone_glass_railing",
         "y": 180
       },
       "when": {
@@ -29,7 +29,7 @@
     },
     {
       "apply": {
-        "model": "vintagefurn:block/andesite_cut_arched_railing"
+        "model": "vintagefurn:block/stone_glass_railing"
       },
       "when": {
         "west": "true"

@@ -2,6 +2,7 @@ package net.cf.vintageefurn.registry;
 
 import net.cf.vintageefurn.VintageFurn;
 import net.cf.vintageefurn.items.BeamItem;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.DeferredRegister;
@@ -78,21 +79,32 @@ public final class BeamsItems {
         return BEAM_ITEMS;
     }
     public static Item getPlankBlock(String woodType) {
-        return switch (woodType) {
-            case "oak" -> Items.OAK_PLANKS;
-            case "spruce" -> Items.SPRUCE_PLANKS;
-            case "birch" -> Items.BIRCH_PLANKS;
-            case "jungle" -> Items.JUNGLE_PLANKS;
-            case "acacia" -> Items.ACACIA_PLANKS;
-            case "dark_oak" -> Items.DARK_OAK_PLANKS;
-            case "mangrove" -> Items.MANGROVE_PLANKS;
-            case "cherry" -> Items.CHERRY_PLANKS;
-            case "crimson" -> Items.CRIMSON_PLANKS;
-            case "warped" -> Items.WARPED_PLANKS;
-            case "bamboo" -> Items.BAMBOO_PLANKS;
-            default -> throw new IllegalArgumentException("Unknown wood type: " + woodType);
+        Item item = ForgeRegistries.ITEMS.getValue(
+                new ResourceLocation("minecraft", woodType + "_planks"));
+
+        if (item == null || item == Items.AIR) {
+            throw new IllegalArgumentException("Unknown wood type: " + woodType);
+        }
+
+        return item;
+    }
+    public static ResourceLocation getStoneTexture(String stoneType) {
+        return switch (stoneType) {
+            case "stone", "mud_bricks", "deepslate_tiles" ->
+                    new ResourceLocation("minecraft", "block/" + stoneType);
+            case "limestone","scorchia", "scoria"->
+                    new ResourceLocation("vintagefurn", "block/create/stone_types/" + stoneType);
+
+            default -> {
+                String[] split = stoneType.split("_", 2);
+                yield new ResourceLocation(
+                        VintageFurn.MOD_ID,
+                        "block/create/stone_types/" + split[1] + "/" + split[0]
+                );
+            }
         };
     }
+
 
     private BeamsItems() {
     }

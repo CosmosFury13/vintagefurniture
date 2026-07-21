@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-20T14:38:47.2571784	Recipes
+// 1.20.1	2026-07-21T20:05:01.1237226	Recipes
 652d9da2e24af495238484394bb3f5f1e567e632 data/vintagefurn/advancements/recipes/building_blocks/beam_acacia.json
 13d9ab2fbfc96d2c2f2e9c3c54d87ed240655cea data/vintagefurn/advancements/recipes/building_blocks/beam_bamboo.json
 3df1796bc587bc334cbff4c5ce7b7d2712f2576a data/vintagefurn/advancements/recipes/building_blocks/beam_birch.json
@@ -10,6 +10,7 @@ a8cbb5f9095afe66e2819d99b968554d09f1c8bb data/vintagefurn/advancements/recipes/b
 2b955dc66703fc36e5806bdf8366d45eec51cccb data/vintagefurn/advancements/recipes/building_blocks/beam_oak.json
 0d60d3bee1435c67ca84e1d000f24975c268024e data/vintagefurn/advancements/recipes/building_blocks/beam_spruce.json
 72acd4942ac899c42490ebbc0d35750aacf8c4c2 data/vintagefurn/advancements/recipes/building_blocks/beam_warped.json
+1b1711d89b8d26f29733208dcc1d2d78d78df1e1 data/vintagefurn/advancements/recipes/building_blocks/stone_glass_railing.json
 9d6a9c6d0d27257c82b86e8db44cd8746fb87fd3 data/vintagefurn/recipes/beam_acacia.json
 9e53788b8ec6af0c9316689a04b6f4dba697440b data/vintagefurn/recipes/beam_bamboo.json
 6688b2525c0be58e19a20c76db23a278fdfd77c5 data/vintagefurn/recipes/beam_birch.json
@@ -21,3 +22,4 @@ a8cbb5f9095afe66e2819d99b968554d09f1c8bb data/vintagefurn/advancements/recipes/b
 3b99cd9b6b96c4a32fa2e593d8353e4499d0e7d7 data/vintagefurn/recipes/beam_oak.json
 1a4e667b66b8c864b51303d3a71c139fdee99697 data/vintagefurn/recipes/beam_spruce.json
 82a4ed4d159a6b21f914b23a0256ac251d1fc6e4 data/vintagefurn/recipes/beam_warped.json
+23ae8f0834074df7bd5d37b4e3071ecae5d7829b data/vintagefurn/recipes/stone_glass_railing.json
